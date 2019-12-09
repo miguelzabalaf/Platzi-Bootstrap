@@ -11,9 +11,9 @@
 
     <title>Platzi Conf Miguel Zabala</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="59.45">
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div class="container">
                     <a class="navbar-brand" href="#">
                         <figure>
@@ -24,22 +24,22 @@
                     <span class="navbar-toggler-icon"></span>
                     </button>
                 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                        <a class="nav-link" href="#">La conferencia</a>
+                        <li class="nav-item">
+                        <a class="nav-link" href="#main">La conferencia</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#oradores">Los oradores</a>
+                        <a class="nav-link" href="#speakers">Los oradores</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">El lugar y la fecha</a>
+                        <a class="nav-link" href="#place-time">El lugar y la fecha</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="#">Conviertete enn orador</a>
+                        <a class="nav-link" href="#conviertete-en-orador">Conviertete enn orador</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link text-platzi" href="#">Compra de tickets</a>
+                        <a class="nav-link text-platzi" data-toggle="modal" data-target="#modalcompra" href="#">Compra de tickets</a>
                         </li>
                     </ul>
                     </div>
@@ -67,7 +67,7 @@
                                   <h1>Platzi Conf Hawaii</h1>
                                   <p class="d-none d-md-block">Platzi Conf llega por primera vez a Hawaii, un evento para compartir con nuestra comunidad, se verán charlas relacionadas con la tecnología, lenguajes de programación y muchas cosas más. Conoce a los  <i>Founders</i> de la empresa y presencia una de sus charlas, relacionate con estudiantes de tu mismo campo y crea junto con ellos.</p>
                                   <a class="linkOrador btn btn-outline-light" href="#">Quiero ser orador</a>
-                                  <a class="linkComprar btn btn-platzi" href="#">Comprar tickets</a>
+                                  <a class="linkComprar btn btn-platzi" data-toggle="modal" data-target="#modalcompra" href="#">Comprar tickets</a>
                               </div>
                           </div>
                       </div>
@@ -162,6 +162,49 @@
     </section>
 <!-- LUGAR Y FECHA************************************************************************************************************************** -->
 
+<!-- CONVIERTETE EN SPEAKER***************************************************************************************************************** -->
+    <section id="conviertete-en-orador" class="pb-4">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center pt-4 pb-4">
+                    <small class="text-uppercase">conviértete en un</small>
+                    <h2 class="text-upercase">Orador</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <p>Anótate como orador para dar una <abbr data-toggle="tooltip" title="Charlas de 5 minutos.">charla ignite</abbr>. ¡Cuéntanos de lo que quieres hablar!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12 col-md-6">
+                                    <input type="text" class="form-control" placeholder="Nombre">
+                                </div>
+                                <div class="form-group col-12 col-md-6">
+                                    <input type="text" class="form-control" placeholder="Apellido">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-grounp col">
+                                    <textarea name="text" class="form-control" placeholder="¿Sobre qué quieres hablar?"></textarea>
+                                    <small class="form-text text-muted">Recuerda incluír un título para tu charla</small>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col">
+                                    <button class="btn btn-platzi btn-block" type="button">Enviar</button>
+                                </div>
+                            </div>
+                        </form>                    
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- CONVIERTETE EN SPEAKER***************************************************************************************************************** -->
+
 <!-- FOOOTER**********************************************************************************************************************+ -->
     <footer id="footer" class="pb-4 pt-4">
         <div class="container">
@@ -186,11 +229,37 @@
                 </div>
             </div>
         </div>
-    </footer>
+    <!-- </footer> -->
+
+<!-- MODAAAAAAAAAAAAAAALLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL -->
+
+
+<div class="modal fade" id="modalcompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="/js/javascript.js"></script>
   </body>
 </html>
