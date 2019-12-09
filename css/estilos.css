@@ -4,3 +4,20 @@
 .Footer a{
     color: white;
 }
+.navbar-brand{
+    margin-right: 0;
+}
+.navbar-brand figure{
+    margin-bottom: 0;
+}
+.navbar-brand figure img{
+    width: 80px;
+    align-content: center;
+}
+.text-platzi{
+    color: white !important;
+    background-color: #97c93e !important;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
