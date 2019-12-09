@@ -83,3 +83,11 @@ height: 100%;
     background-color: #82ad36;
     color: white;
 }
+
+#place-time{
+    background-color: #343a40;
+    color: white;
+}
+#place-time img{
+    max-width: 100%;
+}
